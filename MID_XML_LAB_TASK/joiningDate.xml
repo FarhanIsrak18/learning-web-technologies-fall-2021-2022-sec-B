@@ -1,0 +1,17 @@
+<admissionDate>	
+	<stuff>
+		<slNo>29</slNo>
+		<name> john Carter </name>
+		<date>25/12/2015</date>
+	</stuff>
+	<stuff>
+		<id>35</id>
+		<name> Bob Marshal</name>
+		<email>13/01/1999</email>
+	</stuff>
+	<stuff>
+		<id>35</id>
+		<name> Clark Kent</name>
+		<email>17/06/2005</email>
+	</stuff>
+</admissionDate>

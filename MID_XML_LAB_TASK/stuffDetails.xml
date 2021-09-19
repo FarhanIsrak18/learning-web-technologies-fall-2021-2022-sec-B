@@ -1,0 +1,42 @@
+<stuffDetails>
+	<stuff>
+		<id>1</id>
+		<name>john Doe </name>
+		<address>
+			<flat></flat>
+			<houseNo>38</houseNo>
+			<roadNo>3</roadNo>
+			<area>Banani</area>
+			<district>Dhaka</district>
+		</address>
+		<department></department>
+		<salary></salary>
+	</stuff>
+	<stuff>
+		<id>2</id>
+		<name>Mark Zuckerberg</name>
+		<address>
+			<flat>A/1</flat>
+			<houseNo>20</houseNo>
+			<roadNo>18</roadNo>
+			<area>Mirpur</area>
+			<district>Dhaka</district>
+		</address>
+		<department></department>
+		<salary></salary>
+	</stuff>
+	<stuff>
+		<id>3</id>
+		<name> Ala Voski</name>
+		<address>
+			<flat></flat>
+			<houseNo>38</houseNo>
+			<roadNo>3</roadNo>
+			<area>Motijheel</area>
+			<district></district>
+		</address>
+		<department></department>
+		<salary></salary>
+	</stuff>
+	
+</stuffDetails>
