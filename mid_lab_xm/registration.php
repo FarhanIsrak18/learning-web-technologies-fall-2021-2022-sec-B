@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +18,7 @@
     <u>User Type</u><br>
     <input type="radio" name="user" value=""> Admin
     <input type="radio" name="user" value=""> User<br>
-    <button type="submit">Sign Up</button>
+    <button type="submit" name="submit" value="submit">Sign Up</button>
     <a href="login.php"><u>Sign In</u></a>
  </fieldset>
 </form>
@@ -23,8 +26,6 @@
 </html>
 
 <?php 
-	session_start();
-
 	if(isset($_REQUEST['submit'])){
 		$id = $_REQUEST['id'];		
 		$password = $_REQUEST['password'];
@@ -38,17 +39,16 @@
 		  	if($name != ""){
 				if($utype != ""){
 
-					$myfile = fopen('data.txt', 'a');
-					$user = $username."|".$password."|".$email."\r\n";
-					fwrite($myfile, $data);
+					$myfile = fopen('Data.txt', 'w');
+					$data = $id."|".$password."|".$confirmPass."|".$name."|".$utype."\r\n";
+					fwrite($myfile, $Data);
 					fclose($myfile);
 
-					header('location: login.html');
+					header('location: login.php');
 				}else{
 					echo "input user type";
 				}
-				}
-				else{
+			 }else{
 					echo "invalid name...";
 				}
 			}else{
@@ -59,6 +59,6 @@
 		}
 	}else{
 		echo "invalid  id....";
-	}
-	
+	}	
+}
 ?>
