@@ -10,7 +10,7 @@
  	<legend>Registration</legend>
     ID<br><input type="text" name="id" value=""><br>
     Password<br><input type="password" name="password" value=""><br>
-    Confirm Password<br><input type="password" name="password" value=""><br>
+    Confirm Password<br><input type="password" name="confirmPass" value=""><br>
     Name<br><input type="text" name="name" value=""><br>
     <u>User Type</u><br>
     <input type="radio" name="user" value=""> Admin
@@ -28,28 +28,37 @@
 	if(isset($_REQUEST['submit'])){
 		$id = $_REQUEST['id'];		
 		$password = $_REQUEST['password'];
-		$confirmPass = $_REQUEST['password'];
-		$username = $_REQUEST['username'];
-		$email = $_REQUEST['email'];
+		$confirmPass = $_REQUEST['confirmPass'];
+		$name = $_REQUEST['name'];
+		$utype = $_REQUEST['user'];
 
-		if($username != ""){
-			if($password != ""){
-				if($email != ""){
+		if($id != ""){
+		 if($password != ""){
+		  if($confirmPass != ""){
+		  	if($name != ""){
+				if($utype != ""){
 
-					$myfile = fopen('user.txt', 'a');
+					$myfile = fopen('data.txt', 'a');
 					$user = $username."|".$password."|".$email."\r\n";
-					fwrite($myfile, $user);
+					fwrite($myfile, $data);
 					fclose($myfile);
 
 					header('location: login.html');
 				}else{
-					echo "invalid email...";
+					echo "input user type";
+				}
+				}
+				else{
+					echo "invalid name...";
 				}
 			}else{
-				echo "invalid password...";
+				echo "invalid retype password...";
 			}
 		}else{
-			echo "invalid username...";
+			echo "invalid  password....";
 		}
+	}else{
+		echo "invalid  id....";
 	}
+	
 ?>
