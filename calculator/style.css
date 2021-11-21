@@ -1,0 +1,30 @@
+@import url();
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'poppins',sans-serif;
+}
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 1000vh;
+	background: seagreen;
+}
+.calculator
+{
+	position: relative;
+	display: grid;
+}
+.calculator .value
+{
+	grid-column: span 4 ;
+	height: 100px;
+	text-align: right;
+	border:none ;
+	outline: none;
+	padding: 10;
+	font-size: 18px;
+}
